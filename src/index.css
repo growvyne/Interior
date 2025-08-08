@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-prev, .slick-next {
+  background: black;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background: #444;
+}
