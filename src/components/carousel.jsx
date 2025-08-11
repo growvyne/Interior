@@ -1,38 +1,39 @@
   import React, { useEffect, useState } from 'react';
   import { useMediaQuery } from '@mui/material';
 
-  const imageData = [
-    {
-      src: `${import.meta.env.BASE_URL}slider/s1.jpg`,
-      alt: 'Modern Living Room',
-      caption: 'Modern Living Room Design',
-      description: 'Experience contemporary elegance with our living room designs.',
-    },
-    {
-      src: `${import.meta.env.BASE_URL}slider/s2.jpg`,
-      alt: 'Elegant Bedroom',
-      caption: 'Elegant Bedroom Setup',
-      description: 'Relax in a bedroom that blends comfort with modern aesthetics.',
-    },
-    {
-      src: 'https://growvyne.github.io/Interior/slider/s3.jpg',
-      alt: 'Luxury Kitchen',
-      caption: 'Luxury Kitchen Interior',
-      description: 'Discover the perfect blend of luxury and functionality.',
-    },
-    {
-      src: 'https://growvyne.github.io/Interior/slider/office.jpg',
-      alt: 'Stylish Workspace',
-      caption: 'Stylish Home Office',
-      description: 'Boost your productivity in a stylish workspace setup.',
-    },
-    {
-      src: 'https://growvyne.github.io/Interior/slider/washroom.jpg',
-      alt: 'Modern Washroom Workspace',
-      caption: 'Modern Washroom Design',
-      description: 'Functional and modern washroom interiors.',
-    },
-  ];
+  const base = import.meta.env.BASE_URL;
+ const imageData = [
+  {
+    src: `${base}slider/s1.jpg`,
+    alt: 'Modern Living Room',
+    caption: 'Modern Living Room Design',
+    description: 'Experience contemporary elegance with our living room designs.',
+  },
+  {
+    src: `${base}slider/s2.jpg`,
+    alt: 'Elegant Bedroom',
+    caption: 'Elegant Bedroom Setup',
+    description: 'Relax in a bedroom that blends comfort with modern aesthetics.',
+  },
+  {
+    src: `${base}slider/kit2.jpg`,
+    alt: 'Luxury Kitchen',
+    caption: 'Luxury Kitchen Interior',
+    description: 'Discover the perfect blend of luxury and functionality.',
+  },
+  {
+    src: `${base}slider/office.jpg`,
+    alt: 'Stylish Workspace',
+    caption: 'Stylish Home Office',
+    description: 'Boost your productivity in a stylish workspace setup.',
+  },
+  {
+    src: `${base}slider/washroom.jpg`,
+    alt: 'Modern Washroom Workspace',
+    caption: 'Modern Washroom Design',
+    description: 'Functional and modern washroom interiors.',
+  },
+];
 
   const CarouselComponent = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

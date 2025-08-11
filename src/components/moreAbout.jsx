@@ -73,13 +73,13 @@ export default function AboutSection() {
 
           {/* Side Heading */}
           <Typography
-            variant="h4"
+            variant="h5"
             fontWeight="bold"
             gutterBottom
-            sx={{ color: "#fff", fontSize: "70px" }}
+            sx={{ color: "#fff", fontSize: "60px" }}
           >
             Where Spaces Inspire, and{" "}
-            <span style={{ color: "#CAA05C" }}>Design Comes Alive</span>
+            <span style={{ color: "#CAA05C" }}>Design Comes <br />Alive</span>
           </Typography>
 
           <Divider sx={{ bgcolor: "#fff", width: "60px", mb: 3 }} />

@@ -164,9 +164,9 @@ export default function ServiceSection() {
               >
                 <ListItemText
                   primaryTypographyProps={{
-                    fontSize: "45px",
-                    fontWeight: "500",
-                    fontFamily: "cursive",
+                    fontSize: "40px",
+                    fontWeight: "400",
+                    fontFamily:'fantasy',
                   }}
                   primary={`${service.id}. ${service.title}`}
                 />
