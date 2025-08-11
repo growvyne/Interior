@@ -132,7 +132,7 @@ export default function ServiceSection() {
                 },
               }}
             >
-              <Typography variant="h6" fontWeight="bold">
+              <Typography variant="h6" fontWeight="500">
                 {services[activeIndex].title}
               </Typography>
               <Typography variant="body2">
@@ -165,7 +165,7 @@ export default function ServiceSection() {
                 <ListItemText
                   primaryTypographyProps={{
                     fontSize: "45px",
-                    fontWeight: "700",
+                    fontWeight: "500",
                     fontFamily: "cursive",
                   }}
                   primary={`${service.id}. ${service.title}`}
