@@ -68,7 +68,7 @@ export default function Footer() {
           <Grid item xs={12} sm={6} md={3} sx={{ px: { xs: 0, md: 3 } }}>
             <Box sx={{ mb: 2 }}>
               <img
-                src="/public/assets/glogonew.webp"
+                src="https://i.ibb.co/21SfCHK1/glogonew.webp" 
                 alt="logo"
                 style={{ height: 150, marginBottom: 8 }}
               />
