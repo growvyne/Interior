@@ -67,11 +67,13 @@ export default function Footer() {
           {/* Logo & Company Info */}
           <Grid item xs={12} sm={6} md={3} sx={{ px: { xs: 0, md: 3 } }}>
             <Box sx={{ mb: 2 }}>
+                <a href="/">
               <img
                 src="https://i.ibb.co/21SfCHK1/glogonew.webp" 
                 alt="logo"
                 style={{ height: 150, marginBottom: 8 }}
               />
+              </a>
             </Box>
             <Typography variant="body1" sx={{ fontFamily: "fantasy" }}>
               We transform your vision into <br />

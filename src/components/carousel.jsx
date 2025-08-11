@@ -3,31 +3,31 @@
 
   const imageData = [
     {
-      src: '/slider/s1.jpg',
+      src: 'https://growvyne.github.io/Interior/slider/s1.jpg',
       alt: 'Modern Living Room',
       caption: 'Modern Living Room Design',
       description: 'Experience contemporary elegance with our living room designs.',
     },
     {
-      src: '/slider/s2.jpg',
+      src: 'https://growvyne.github.io/Interior/slider/s2.jpg',
       alt: 'Elegant Bedroom',
       caption: 'Elegant Bedroom Setup',
       description: 'Relax in a bedroom that blends comfort with modern aesthetics.',
     },
     {
-      src: '/slider/s3.jpg',
+      src: 'https://growvyne.github.io/Interior/slider/s3.jpg',
       alt: 'Luxury Kitchen',
       caption: 'Luxury Kitchen Interior',
       description: 'Discover the perfect blend of luxury and functionality.',
     },
     {
-      src: '/slider/office.jpg',
+      src: 'https://growvyne.github.io/Interior/slider/office.jpg',
       alt: 'Stylish Workspace',
       caption: 'Stylish Home Office',
       description: 'Boost your productivity in a stylish workspace setup.',
     },
     {
-      src: '/slider/washroom.jpg',
+      src: 'https://growvyne.github.io/Interior/slider/washroom.jpg',
       alt: 'Modern Washroom Workspace',
       caption: 'Modern Washroom Design',
       description: 'Functional and modern washroom interiors.',
@@ -70,6 +70,23 @@
     };
 
     const currentSlide = imageData[currentIndex];
+
+     const handleClick = () => {
+    // Get all sections (you can use 'section' tag or a .class selector)
+    const sections = Array.from(document.querySelectorAll(".scroll-section"));
+
+    // Get current scroll position
+    const currentScroll = window.scrollY;
+
+    // Find the next section below current view
+    const nextSection = sections.find(
+      (section) => section.offsetTop > currentScroll + 10 // +10px to avoid tiny overlaps
+    );
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
     return (
       <div
@@ -236,34 +253,38 @@
           ))}
         </div>
 
-        <button
-  onClick={() => {
-    const next = document.getElementById('next-section');
-    if (next) next.scrollIntoView({ behavior: 'smooth' });
-  }}
-  style={{
-    position: 'absolute',
-    bottom: '30px',
-    right: '30px',
-    zIndex: 6,
-    width: '50px',
-    height: '50px',
-    borderRadius: '50%',
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-    border: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: '28px',
-    cursor: 'pointer',
-    boxShadow: '0 2px 10px rgba(0,0,0,0.3)',
-    transition: 'background 0.3s',
-  }}
-  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#ddd')}
-  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.8)')}
->
-  ↓
-</button>
+         <button
+      onClick={() => {
+        const next = document.getElementById('next-section');
+        if (next) {
+          next.scrollIntoView({ behavior: 'smooth' }); // smooth scroll effect
+        }
+      }}
+      style={{
+        position: 'absolute',
+        bottom: '30px',
+        right: '30px',
+        zIndex: 6,
+        width: '50px',
+        height: '50px',
+        borderRadius: '50%',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        border: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '28px',
+        cursor: 'pointer',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.3)',
+        transition: 'background 0.3s',
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#ddd')}
+      onMouseLeave={(e) =>
+        (e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.8)')
+      }
+    >
+      ↓
+    </button>
 
         {/* Slide-in animation style */}
         <style>

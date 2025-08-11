@@ -50,8 +50,19 @@ const Navbar = () => {
         >
           {/* Left: Logo */}
           <Box sx={{ flex: '1 1 auto' }}>
-          <img src="https://i.ibb.co/21SfCHK1/glogonew.webp" alt="logo"  style={{height:isMobile?'60px':'100px',width:isMobile?'60px':'100px'}}/>
-          </Box>
+  <a href="/">
+    <img
+      src="https://i.ibb.co/21SfCHK1/glogonew.webp"
+      alt="logo"
+      style={{
+        height: isMobile ? '60px' : '100px',
+        width: isMobile ? '60px' : '100px',
+        cursor: 'pointer'
+      }}
+    />
+  </a>
+</Box>
+
 
           {/* Center: Nav menu (Desktop only) */}
           {!isMobile && (
@@ -69,7 +80,7 @@ const Navbar = () => {
                   key={item}
                   sx={{
                     color: '#333',
-                    fontSize: '16px',
+                    fontSize: '18px',
                     fontWeight: 500,
                     textTransform: 'none',
                     fontWeight: 700,
