@@ -3,13 +3,13 @@
 
   const imageData = [
     {
-      src: 'https://growvyne.github.io/Interior/slider/s1.jpg',
+      src: `${import.meta.env.BASE_URL}slider/s1.jpg`,
       alt: 'Modern Living Room',
       caption: 'Modern Living Room Design',
       description: 'Experience contemporary elegance with our living room designs.',
     },
     {
-      src: 'https://growvyne.github.io/Interior/slider/s2.jpg',
+      src: `${import.meta.env.BASE_URL}slider/s2.jpg`,
       alt: 'Elegant Bedroom',
       caption: 'Elegant Bedroom Setup',
       description: 'Relax in a bedroom that blends comfort with modern aesthetics.',
